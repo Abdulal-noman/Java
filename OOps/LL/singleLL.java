@@ -32,8 +32,38 @@ public class singleLL {
 
     }
 
-    // print the linked list
+    // remove an element by value
+    public void removenode(int data) {
+        if (head == null)
+            return;// if node is emply
 
+        if (head.data == data) {// if the removal node is the head node
+
+            head = head.next;// first head change to the head next node as a head
+
+            if (head == null && tail == null) {
+                // if head and tail node both are empty ll dos't exeist
+
+                return;
+            }
+
+        }
+        node curreent = head;
+        while (curreent.next != null && curreent.next.data != data) {
+            curreent = curreent.next;
+
+        }
+        if(curreent.next!=null){
+            curreent.next=curreent.next.next;
+           if(curreent.next==null)
+           tail=curreent;
+        }
+
+    }
+
+
+
+// print the linked list
     public void pirnt() {
         // sellect a node as curreent node
         // this node connect the next node
@@ -53,6 +83,7 @@ public class singleLL {
         list.addnode(0);
         list.addnode(1);
         list.addnode(2);
+        list.removenode(0);
         list.pirnt();
 
     }
