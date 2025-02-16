@@ -61,6 +61,16 @@ public class singleLL {
 
     }
 
+    // insert at head
+    public void insertathead(int data){
+        node athead=new node(data);
+        athead=head;
+        athead.next=head;
+        head=
+
+
+
+    }
 
 
 // print the linked list
