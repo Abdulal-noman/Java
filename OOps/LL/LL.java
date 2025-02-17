@@ -27,6 +27,26 @@ public void addnode(int data){
     tail=newnode;
   }
 }
+// inseratathead
+public void insertathead(int data){
+  node athead=new node(data);
+  athead.next=head;
+  head=athead;
+  if(tail==null)
+  tail=athead;
+}
+
+
+// insert at postion
+
+public void insertatposition(int data,int postion){
+  node temp =new node(data);
+  if(postion==0){
+    insertathead(data);
+  }
+
+
+}
 
 
 // print output
